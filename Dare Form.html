@@ -1,0 +1,458 @@
+<!DOCTYPE>
+	<html>
+		<head>
+			<title>Dare Form</title>
+			<CENTER>
+								
+			<style>
+
+				#f1
+					{ text-align:center;
+					
+					background: linear-gradient(to right,teal,ghostwhite,teal); 
+
+					color:blue;
+					padding:15px;
+					max-width:390px; 
+					max-height:1920px;
+					}
+					
+			
+   
+  
+					
+					
+				#f2	
+					{
+					margin-left:auto;
+					margin-right:auto;
+					padding:20px; 
+					width:550px;
+					text-align:left;
+					background-color:lightblue;
+									
+					}
+					
+				#f3
+					{
+					padding:20px; 
+					width:550px;
+					margin-left:auto;
+					margin-right:auto;
+					background-color:lightblue;
+					text-align:left;
+
+					
+					}
+					
+					
+				#f4 {
+					background-color:#67AECA;
+					padding:20px; 
+					width:550px;
+					text-align:center;
+					margin-left:auto;
+					margin-right:auto;
+					}
+				
+				body {
+					 
+						background-image:url("1080.png");
+						height:100%;
+						width:100%;
+					  }
+					  
+				
+					  
+				h2,h3,h4{
+							box-shadow: 10px 10px 5px black;
+							 background: linear-gradient(to right,teal,ghostwhite,teal); 
+							background-color:red;
+							max-width:350px;
+							max-height:50px;
+							
+				
+							
+							font-size:20px;
+							text-shadow: 2px 2px 4px #000000;
+    						color: ghostwhite;
+						}	  
+				
+				p a:hover{
+							color:white;
+							cursor:pointer;}
+							
+				.text_field:hover{
+										background-color:beige;
+										color:black;
+										
+										}
+				
+			.q{
+	padding: 10px;
+	text-align:center;
+	
+	float: left;
+	display: block;
+			  }
+			 
+					  
+					  
+					  
+	input[type=Submit]{
+				  
+	color: #FFFFFF ;
+	background: #7BC74D;
+	background-size: auto;
+	border-style: none;
+	border-width: 1px;
+	border-color: #FFFFFF;
+	border-radius: 4px;
+	text-align: center;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	min-width: 30%;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.30);
+	}
+					
+	input[type=Submit]:hover
+					{
+						background-color:teal;
+						cursor:pointer;
+					}
+					  
+	input[type=Reset]{
+	color: #FFFFFF ;
+	background: #7BC74D;
+	background-size: auto;
+	border-style: none;
+	border-width: 1px;
+	border-color: #FFFFFF;
+	border-radius: 4px;
+	text-align: center;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	min-width: 30%;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.30);
+						}
+		
+	input[type=Reset]:hover
+				{
+					background-color:teal;
+					cursor:pointer;
+					}
+	
+			textarea:hover
+				  {
+				    background-color:beige;
+				    color:black;
+				  }
+			
+		h1{
+			box-shadow: 10px 10px 5px black;
+					 
+					 max-width:350px;
+					 max-height:50px;
+					 
+					 background: linear-gradient(to right,teal,ghostwhite,teal); 
+			 text-shadow: 2px 2px 4px #000000;
+    		color: ghostwhite;
+
+	}
+	
+
+	td{
+		color:blue;
+	}
+			</style>
+		<script>
+	function CalcExtra(){
+					var Weightunit= document.getElementById("weightunit").value;
+					var heightunits=document.getElementById("heightunit").value;
+					var height=Number(document.getElementById("inheight").value);
+					var weight=Number(document.getElementById("inweight").value);
+					if(heightunits=="inches"){
+					height*=0.0254;
+					}
+					if(Weightunit=="pounds"){
+						weight*=0.45359237;
+					}
+					if(height==0 || weight==0){
+					alert("Please enter a weight or height");
+					}else{
+					var bmi=weight/Math.pow(height,2);
+					bmi=Math.round(bmi*10)/10;
+					document.getElementById("yourbmi").value=bmi;
+					if(bmi<18.5){
+					document.getElementById("bmidetermination").innerHTML=" You're underweight";
+					}else if(bmi>=18.5&&bmi<=24.9){
+					document.getElementById("bmidetermination").innerHTML="You have an average weight";
+					}else if(bmi>24.9&&bmi<=29.9){
+					document.getElementById("bmidetermination").innerHTML=" You're overweight";
+					}else{
+					document.getElementById("bmidetermination").innerHTML=" You are Obese";
+					}
+				}
+	}
+	
+  
+	  function valform () 
+	  {
+      var x = document.forms["Truth_Form"]["Fname"].value;
+      if (x==null || x=="") {
+       alert("First Name is required!!");
+              }
+
+	  var y = document.forms["Truth_Form"]["Mname"].value;
+      if (y==null || y=="") {
+       alert("Middle Name is required!!");
+       
+              }
+
+      var lname = document.forms["Truth_Form"]["Lname"].value;
+      if (lname==null || lname=="") {
+       alert("Last Name is required!!");
+       
+              }
+	   var Age=document.forms["Truth_Form"]["age"].value;
+		if (Age==null||Age==""){
+		alert("Age is required!!");
+		
+			 }
+
+
+	    var email = document.forms["Truth_Form"]["instemail"].value;
+      if (email==null || email=="") {
+       alert("Email is required!!");
+      
+              }
+			  
+      var date = document.forms["Truth_Form"]["Date"].value;
+      if (date=="") {
+       alert("Date is required!!");
+              }
+         
+	  var height = document.forms["Truth_Form"]["height"].value;
+      if (height==null || height=="") {
+       alert("Height is required!!");
+      
+              }
+     
+	  var weight = document.forms["Truth_Form"]["weight"].value;
+      if (weight==null || weight=="") {
+       alert("Weight is required!!");
+       
+              }
+			  var victimemail= document.forms["Truth_Form"]["victimemail"].value;
+	  if(victimemail==null || victimemail==""){
+		  alert("Victim email is required");
+	  }
+	  
+	
+	 var checkboxes=document.forms[0];
+    var okay=false;
+	
+    for(var i=0;i<checkboxes.length;i++)
+    {
+        if(checkboxes[i].checked)
+        {
+            okay=true;
+            break;
+        }
+    }
+	
+    if(!okay){
+	alert("Please check a checkbox");
+	  
+	  }
+
+	 }
+		</script>
+		</head>
+		
+
+			
+			
+			<body>
+			
+			
+			<!---the form --->
+			<form class="form" name="Truth_Form" >
+				 <form>
+							<fieldset Id="f1">
+							<p>
+							<u><strong><a href="Truth Form.html">Truth Form</a></strong></u>&nbsp&nbsp&nbsp&nbsp||&nbsp&nbsp&nbsp
+
+							 <u><strong><a href="Dare Form.html">Dare Form </a></strong></u>
+								
+							</p>
+							<img src="Dare.png" width="585px" height="200px">
+								<legend>
+									<h1>Dare Form</h1> 
+								</legend>
+							
+							
+							
+							<fieldset Id="f2">
+								<legend>
+									<h2 style="text-align:left;">Instigator</h2>
+								</legend>
+
+													
+			<div Id="FIRSTNAME" class= "q required">
+				<input type="text" name="Fname" class="text_field" Id="Fname" placeholder="First Name" size="30" maxlength="30"/>
+			</div>
+			
+			<div Id="MIDDLENAME" class="q required">
+			   <input type="text" name= "Mname" class="text_field" Id="Mname" placeholder="Middle Name" size="30" maxlength="30" /><br>
+			</div>
+			   
+			   
+			<div Id="LASTNAME" class= "q required">
+			  <input type="text" name="Lname" class="text_field" Id="Lname" placeholder= "Last Name" size= "30" maxlength="30" />
+			   </div><br>
+			   
+			   
+			<div Id="Age" class="q required">
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAge: &nbsp&nbsp&nbsp 
+				<input type= "text" name="age" class="text_field" placeholder="21yrs" size="10" maxlength="5" />&nbsp&nbsp&nbsp&nbsp&nbsp
+			</div>
+						
+			<div Id="Gender" class="q required">
+			Gender: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<select Id= "Gender" name="gender"  class="drop_down" >
+					<option value="male"> Male </option>
+					<option value="female"> Female </option>
+					<option value="other"> Other</option>
+				</select>
+			</div><br>
+			
+							
+			<div Id="EMAIL" class="q required">
+			   <input type="email" name="instemail" class="text_field" Id="email"  placeholder="Email Address:@gmail.com"  size="52" maxlength="25" /><br>
+			</div>
+			
+			
+			<div Id="Date" class="q required">
+			Date that the Dare form is performed:&nbsp&nbsp<input type="date" name ="Date"><br>&nbsp&nbsp&nbsp
+			</div>
+			
+			
+			<div Id="Weight" class= "q required">
+				Weight:&nbsp
+				
+				<input type="text" name="weight" class="text_field" Id="inweight" placeholder="186lbs/70kg" size="20" maxlength="5">
+				<select Id="weightunit">
+						<option name="pounds" value="pounds">lbs</option>
+						<option name="kilo"   value="kilo"> kg</option>					
+					</select>
+			</div>
+			
+			
+			<div Id="Height" class="q required">
+				Height:&nbsp
+				<input type="text" name="height" class="text_field" Id="inheight" placeholder="60inches/1.7m" size="20" maxlength="5">&nbsp||
+					<select Id="heightunit">
+						<option name="inch" value="inches">inches</option>
+						<option name="meter"   value="meters"> meters</option>					
+					</select>
+					
+					<p><input type="button"name="bmi" value="Calculate your BMI" class="bmiclass" onclick="CalcExtra()"/></p>
+
+					Your BMI is: &nbsp<input type="decimal" id="yourbmi" readonly> This means you are:&nbsp&nbsp<p id="bmidetermination"></p>
+					<br><br><br>	
+				
+			</div>
+
+				</fieldset>	<br>
+			
+			<fieldset Id="F3">
+								<legend>
+									<h3> Victim</h3>
+								</legend>
+								
+				 
+					<div Id="EMAIL" class="q required">
+						 <input type="email" name="victimemail" class="text_field" Id="email"  placeholder="Email Address:example@gmail.com"  size="52" maxlength="25" />
+					</div>
+				
+			</fieldset>	<br>
+			
+			<center>
+			<fieldset Id="f4">
+			  
+		<legend>
+					<h4>Dares</h4>
+				</legend>
+			
+							<div Id=Dare"  class="q required">
+							<table>
+								<tbody align="left" >
+
+				
+
+		 	<tr>
+					<td><input type="checkbox" /></td>
+					<td>Choose anyone here and dance with him/her</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td>Act like a dog and fetch a few objects</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td>Go out and kiss the first person you come across</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td>Wear your pants backward for the rest of the game</td>
+				</tr><tr>
+					<td><input type="checkbox" /></td>
+					<td>Act like a gorilla for 1 minute.</td>
+				</tr><tr>
+					<td><input type="checkbox" /></td>
+					<td>Shout your first crush name loudly</td>
+				</tr><tr>
+					<td><input type="checkbox" /></td>
+					<td>Combine two foods that should never go together, such as pickles and peanut butter or applesauce and olives, and eat a huge bite</td>
+				</tr><tr>
+					<td><input type="checkbox" /></td>
+					<td>Keep a finger in your mouth for the next dare</td>
+				</tr><tr>
+					<td><input type="checkbox" /></td>
+					<td>Try licking your elbow</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" /></td>
+					<td>Suck all your fingers</td>
+				</tr>
+</tbody>
+								
+
+</table>
+
+</div>
+					
+					<br>
+<input type="Submit" name="SUBMIT" value="SUBMIT" onclick="valform()" >&nbsp&nbsp&nbsp&nbsp&nbsp
+		<input type="Reset"  name="Reset"  value="RESET">
+							
+						
+
+					</form>
+					
+				</fieldset>
+				 Copyright &copy Craig Corp.
+			</body>
+</html>
+
+
+
+
+
